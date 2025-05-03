@@ -14,18 +14,20 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/ios-roadmap/IRFoundation.git", from: "0.0.1")
+        .package(name: "IRFoundation", path: "../IRFoundation"),
     ],
     targets: [
         .target(
             name: "IRCore",
             dependencies: [
-                .product(name: "IRFoundation", package: "IRFoundation")
-            ]
+                "IRFoundation"
+            ],
+            path: "IRCore"
         ),
         .testTarget(
             name: "IRCoreTests",
-            dependencies: ["IRCore"]
+            dependencies: ["IRCore"],
+            path: "IRCoreTests"
         )
     ]
 )
