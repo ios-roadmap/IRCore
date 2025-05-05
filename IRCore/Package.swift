@@ -14,20 +14,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "IRFoundation", path: "../IRFoundation"),
+        .package(name: "IRFoundation", path: "../../IRFoundation/IRFoundation"),
     ],
     targets: [
         .target(
             name: "IRCore",
             dependencies: [
                 "IRFoundation"
-            ],
-            path: "IRCore"
+            ]
         ),
-        .testTarget(
-            name: "IRCoreTests",
-            dependencies: ["IRCore"],
-            path: "IRCoreTests"
-        )
     ]
 )
