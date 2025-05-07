@@ -6,7 +6,13 @@ import PackageDescription
 let package = Package(
     name: "IRCore",
     defaultLocalization: "en",
-    platforms: [.iOS(.v18)],
+    platforms: [
+        .iOS(.v18),
+        .macOS(.v15),
+        .tvOS(.v18),
+        .watchOS(.v11),
+        .visionOS(.v2)
+    ],
     products: [
         .library(
             name: "IRCore",
@@ -14,14 +20,15 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "IRFoundation", path: "../../IRFoundation/IRFoundation"),
+        
     ],
     targets: [
         .target(
             name: "IRCore",
             dependencies: [
-                "IRFoundation"
-            ]
+                
+            ],
+            path: "IRCore"
         ),
     ]
 )
