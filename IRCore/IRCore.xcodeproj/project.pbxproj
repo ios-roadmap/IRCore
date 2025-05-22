@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6455B3DE2DDF1AAE003BC6B9 /* IRCoreLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 6455B3DD2DDF1AAE003BC6B9 /* IRCoreLibrary */; };
 		6460BB0B2DCA8A8E00F4C7B7 /* IRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6460BB022DCA8A8D00F4C7B7 /* IRCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6455B3DB2DDF1A99003BC6B9 /* IRCoreLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = IRCoreLibrary; path = ../IRCoreLibrary; sourceTree = SOURCE_ROOT; };
 		6460BB022DCA8A8D00F4C7B7 /* IRCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IRCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6460BB0A2DCA8A8E00F4C7B7 /* IRCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IRCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -44,11 +46,6 @@
 			path = IRCore;
 			sourceTree = "<group>";
 		};
-		6460BB0E2DCA8A8E00F4C7B7 /* IRCoreTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IRCoreTests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6455B3DE2DDF1AAE003BC6B9 /* IRCoreLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,11 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6455B3DC2DDF1AAE003BC6B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6460BAF82DCA8A8D00F4C7B7 = {
 			isa = PBXGroup;
 			children = (
+				6455B3DB2DDF1A99003BC6B9 /* IRCoreLibrary */,
 				6460BB042DCA8A8D00F4C7B7 /* IRCore */,
-				6460BB0E2DCA8A8E00F4C7B7 /* IRCoreTests */,
+				6455B3DC2DDF1AAE003BC6B9 /* Frameworks */,
 				6460BB032DCA8A8D00F4C7B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,6 +125,7 @@
 			);
 			name = IRCore;
 			packageProductDependencies = (
+				6455B3DD2DDF1AAE003BC6B9 /* IRCoreLibrary */,
 			);
 			productName = IRCore;
 			productReference = 6460BB022DCA8A8D00F4C7B7 /* IRCore.framework */;
@@ -136,9 +143,6 @@
 			);
 			dependencies = (
 				6460BB0D2DCA8A8E00F4C7B7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				6460BB0E2DCA8A8E00F4C7B7 /* IRCoreTests */,
 			);
 			name = IRCoreTests;
 			packageProductDependencies = (
@@ -315,9 +319,10 @@
 		6460BB162DCA8A8E00F4C7B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -380,9 +385,10 @@
 		6460BB172DCA8A8E00F4C7B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -509,6 +515,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6455B3DD2DDF1AAE003BC6B9 /* IRCoreLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = IRCoreLibrary;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6460BAF92DCA8A8D00F4C7B7 /* Project object */;
 }
