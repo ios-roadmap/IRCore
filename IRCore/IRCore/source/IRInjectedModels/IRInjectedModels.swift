@@ -11,7 +11,7 @@ public struct IRLazyInjected<T> {
     private var cached: T?
     public var wrappedValue: T {
         mutating get {
-            if cached == nil { cached = IRDependencyContainer.shared.resolve(T.self, scope: .module) }
+            if cached == nil { cached = IRDependencyContainer.shared.resolve(T.self) }
             return cached!
         }
     }

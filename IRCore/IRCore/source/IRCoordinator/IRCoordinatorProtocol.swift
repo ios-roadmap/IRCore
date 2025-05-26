@@ -8,6 +8,6 @@
 import SwiftUI
 
 @MainActor
-public protocol IRCoordinatorProtocol: ObservableObject {
+public protocol CoordinatorProtocol: ObservableObject {
     func start() -> AnyView
 }
